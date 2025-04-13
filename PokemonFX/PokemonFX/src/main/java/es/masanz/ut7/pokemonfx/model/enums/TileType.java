@@ -25,7 +25,24 @@ public enum TileType {
     AGUA_ROCA_DERECHA("/pruebas/agua_roca_derecha.png"),
     AGUA_ROCA_ARRIBA("/pruebas/agua_roca_arriba.png"),
 
-    TELEPORT_RED("/pruebas/teleport_red.png");
+    TELEPORT_RED("/pruebas/teleport_red.png"),
+    TECHO_IZQUIERDA("/pruebas/techo_izquierda.png"),
+    TECHO("/pruebas/techo.png"),
+    TECHO_DERECHA("/pruebas/techo_derecha.png"),
+    TECHO_BORDE_IZQUIERDA("/pruebas/techo_borde_izquierda.png"),
+    TECHO_BORDE("/pruebas/techo_borde.png"),
+    TECHO_BORDE_DERECHA("/pruebas/techo_borde_derecha.png"),
+    VENTANA_IZQUIERDA("/pruebas/ventana_izquierda.png"),
+    PARED_CON_VENTANA_IZQUIERDA("/pruebas/pared_con_ventana_izquierda.png"),
+    TEXTO_GYM("/pruebas/texto_gym.png"),
+    PARED_CON_VENTANA_DERECHA("/pruebas/pared_con_ventana_derecha.png"),
+    VENTANA_DERECHA("/pruebas/ventana_derecha.png"),
+    ESQUINA_DERECHA_SUPERIOR("/pruebas/esquina_derecha_superior.png"),
+    PARED_INFERIOR_IZQUIERDA("/pruebas/pared_inferior_izquierda.png"),
+    PARED_INFERIOR("/pruebas/pared_inferior.png"),
+    PUERTA("/pruebas/puerta.png"),
+    PARED_INFERIOR_DERECHA("/pruebas/pared_inferior_derecha.png"),
+    ESQUINA_DERECHA_INFERIOR("/pruebas/esquina_derecha_inferior.png");
 
     public final Image imagen;
 

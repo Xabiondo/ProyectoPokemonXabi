@@ -75,7 +75,7 @@ public class Ruta1 extends Mapa {
                     case 5:
                         mapData[y][x] = TileType.TELEPORT_RED.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();
-                        teleportMap[y][x] = "Ruta 2";
+                        teleportMap[y][x] = "Ruta 4";
                         break;
                     default:
                         mapData[y][x] = TileType.CAMINO_BLANCO.ordinal();

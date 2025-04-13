@@ -28,21 +28,16 @@ public class Ruta4 extends Mapa {
     protected void cargarMapa() {
 
         int[][] mapaRuta = {
-                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1},
-                {1, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 3, 3, 2, 1, 3, 3, 1},
-                {1, 3, 4, 3, 3, 2, 2, 2, 2, 0, 0, 2, 2, 3, 2, 2, 3, 4, 1},
-                {1, 3, 3, 2, 2, 2, 10, 7, 7, 0, 0, 0, 2, 2, 2, 2, 2, 3, 1},
-                {1, 2, 2, 2, 10, 7, 13, 6, 6, 6, 0, 0, 0, 2, 2, 4, 2, 2, 1},
-                {1, 2, 4, 2, 8, 6, 6, 6, 15, 15, 15, 0, 0, 0, 2, 2, 2, 3, 1},
-                {1, 2, 2, 2, 8, 6, 15, 15, 15, 15, 15, 15, 0, 0, 0, 2, 3, 3, 1},
-                {1, 3, 2, 2, 8, 6, 15, 6, 6, 6, 6, 15, 15, 0, 0, 2, 3, 4, 1},
-                {1, 3, 4, 2, 9, 15, 15, 6, 6, 6, 6, 6, 15, 15, 0, 0, 3, 3, 1},
-                {1, 3, 3, 2, 2, 9, 15, 6, 12, 16, 16, 13, 6, 15, 0, 0, 0, 2, 1},
-                {1, 2, 2, 2, 2, 2, 9, 12, 17, 6, 6, 16, 13, 15, 15, 0, 0, 2, 1},
-                {1, 2, 4, 2, 2, 2, 2, 12, 6, 6, 6, 6, 16, 13, 15, 0, 0, 2, 1},
-                {1, 2, 2, 2, 3, 2, 2, 12, 6, 6, 6, 6, 6, 16, 13, 0, 0, 2, 1},
-                {1, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1},
-                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
+                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 21, 22, 22, 22, 22, 2}, // ← casa empieza aquí
+                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 24, 25, 25, 25, 25, 2},
+                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 27, 28, 29, 30, 39, 2},
+                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 33, 34, 35, 36, 37, 2},
+                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, // ← fila vacía donde estaba la base
+                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
+                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
+                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
+                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
         };
 
         this.inicioX = 1; // Columna 1 (segunda columna)
@@ -63,14 +58,7 @@ public class Ruta4 extends Mapa {
         for (int y = 0; y < altura; y++) {
             for (int x = 0; x < anchura; x++) {
                 switch (mapaRuta[y][x]) {
-                    case 0:
-                        mapData[y][x] = TileType.CAMINO_BLANCO.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
-                        break;
-                    case 1:
-                        mapData[y][x] = TileType.PARED_BLANCA.ordinal();
-                        collisionMap[y][x] = CollisionType.PARED.ordinal();
-                        break;
+
                     case 2:
                         mapData[y][x] = TileType.CESPED.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();
@@ -78,10 +66,6 @@ public class Ruta4 extends Mapa {
                     case 3:
                         mapData[y][x] = TileType.CESPED_HIERBA.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();
-                        break;
-                    case 4:
-                        mapData[y][x] = TileType.CESPED_ARBUSTO.ordinal();
-                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 5:
                         mapData[y][x] = TileType.TELEPORT_RED.ordinal();
@@ -131,6 +115,83 @@ public class Ruta4 extends Mapa {
                         mapData[y][x] = TileType.MONTE_ESQUINA_INFERIOR_IZQUIERDA.ordinal();
                         collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
+                    case 21:
+                        mapData[y][x] = TileType.TECHO_IZQUIERDA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 22:
+                        mapData[y][x] = TileType.TECHO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 23:
+                        mapData[y][x] = TileType.TECHO_DERECHA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 24:
+                        mapData[y][x] = TileType.TECHO_BORDE_IZQUIERDA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 25:
+                        mapData[y][x] = TileType.TECHO_BORDE.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 26:
+                        mapData[y][x] = TileType.TECHO_BORDE_DERECHA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 27:
+                        mapData[y][x] = TileType.VENTANA_IZQUIERDA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 28:
+                        mapData[y][x] = TileType.PARED_CON_VENTANA_IZQUIERDA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 29:
+                        mapData[y][x] = TileType.TEXTO_GYM.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 30:
+                        mapData[y][x] = TileType.PARED_CON_VENTANA_DERECHA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 31:
+                        mapData[y][x] = TileType.VENTANA_DERECHA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 32:
+                        mapData[y][x] = TileType.ESQUINA_DERECHA_SUPERIOR.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 33:
+                        mapData[y][x] = TileType.PARED_INFERIOR_IZQUIERDA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 34:
+                        mapData[y][x] = TileType.PARED_INFERIOR.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 35:
+                        mapData[y][x] = TileType.PUERTA.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal(); // Se puede entrar
+                        break;
+                    case 36:
+                        mapData[y][x] = TileType.PARED_INFERIOR_DERECHA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 37:
+                        mapData[y][x] = TileType.ESQUINA_DERECHA_INFERIOR.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 38:
+                        mapData[y][x] = TileType.CESPED.ordinal(); // por si acaso
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 39:
+                        mapData[y][x] = TileType.ESQUINA_DERECHA_SUPERIOR.ordinal(); // por si acaso
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+
+
                 }
             }
         }

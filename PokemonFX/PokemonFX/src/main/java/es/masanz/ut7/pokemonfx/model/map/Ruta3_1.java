@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 import static es.masanz.ut7.pokemonfx.util.Configuration.*;
 
-public class Ruta3 extends Mapa {
+public class Ruta3_1 extends Mapa {
 
     @Override
     protected void cargarPokemonSalvajes() {
@@ -26,18 +26,18 @@ public class Ruta3 extends Mapa {
     protected void cargarMapa() {
 
         int[][] mapaRuta = {
-                {8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8},
-                {7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7},
+                {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
+                {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
+                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1 , 1, 8, 8, 8, 8, 8, 8, 8},
+                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7, 7, 7, 7, 7, 7, 7, 7},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 5},
-                {0, 0, 1, 1, 0, 0, 1, 1, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1},
-                {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4},
-                {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4},
-                {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4},
-                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+                {0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 4, 1, 1, 1, 1, 1, 1, 1},
+                {4, 4, 0, 0, 4, 4, 4, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4},
+                {4, 4, 4, 0, 0, 0, 0, 0, 4, 4, 4, 0, 0, 4, 4, 4, 4, 4, 4},
+                {4, 4, 4, 4, 0, 0, 0, 4, 4, 4, 4, 4, 0, 0, 0, 4, 4, 4, 4},
+                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 5},
+                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 5},
                 {14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14},
-                {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
-                {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
                 {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
                 {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
                 {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6}
@@ -48,7 +48,7 @@ public class Ruta3 extends Mapa {
 
         this.altura = mapaRuta.length;
         this.anchura = mapaRuta[0].length;
-        this.nombre = "Ruta 3";
+        this.nombre = "Ruta 3.1";
 
         this.mapData = new int[altura][anchura];
         this.collisionMap = new int[altura][anchura];
@@ -94,7 +94,7 @@ public class Ruta3 extends Mapa {
                     case 5:
                         mapData[y][x] = TileType.TELEPORT_RED.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();
-                        teleportMap[y][x] = "Ruta 3.1";
+                        teleportMap[y][x] = "Ruta 4";
                         break;
                     case 6:
                         mapData[y][x] = TileType.AGUAGRANDE.ordinal();

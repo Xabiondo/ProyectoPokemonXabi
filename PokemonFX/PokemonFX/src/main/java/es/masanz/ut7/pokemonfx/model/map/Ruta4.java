@@ -28,16 +28,17 @@ public class Ruta4 extends Mapa {
     protected void cargarMapa() {
 
         int[][] mapaRuta = {
-                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
-                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 21, 22, 22, 22, 22, 2}, // ← casa empieza aquí
+                {15, 15, 15, 15, 15, 15, 15, 15, 15, 9, 2, 2, 2, 2, 2, 2, 2, 2, 2},
+                {18, 18, 18, 18, 18, 18, 18, 18, 18, 14, 2, 2, 2, 21, 22, 22, 22, 22, 2}, // ← casa empieza aquí
                 {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 24, 25, 25, 25, 25, 2},
                 {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 27, 28, 29, 30, 39, 2},
                 {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 33, 34, 35, 36, 37, 2},
-                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, // ← fila vacía donde estaba la base
                 {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
-                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
-                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
-                {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
+                {20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20},
+                {19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19},
+                {20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20},
+                {19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19}
+
         };
 
         this.inicioX = 1; // Columna 1 (segunda columna)
@@ -103,6 +104,10 @@ public class Ruta4 extends Mapa {
                         mapData[y][x] = TileType.AGUA_ROCA_DERECHA.ordinal();
                         collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
+                    case 14:
+                        mapData[y][x] = TileType.MONTE_ESQUINA_INFERIOR_DERECHA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
                     case 15:
                         mapData[y][x] = TileType.MONTE_CENTRO.ordinal();
                         collisionMap[y][x] = CollisionType.PARED.ordinal();
@@ -115,6 +120,19 @@ public class Ruta4 extends Mapa {
                         mapData[y][x] = TileType.MONTE_ESQUINA_INFERIOR_IZQUIERDA.ordinal();
                         collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
+                    case 18:
+                        mapData[y][x] = TileType.MONTE_BORDE_INFERIOR.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 19:
+                        mapData[y][x] = TileType.ARBOL_PARTE_ABAJO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 20:
+                        mapData[y][x] = TileType.ARBOL_PARTE_ARRIBA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+
                     case 21:
                         mapData[y][x] = TileType.TECHO_IZQUIERDA.ordinal();
                         collisionMap[y][x] = CollisionType.PARED.ordinal();

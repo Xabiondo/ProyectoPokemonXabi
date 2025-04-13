@@ -333,7 +333,7 @@ public abstract class Pokemon implements Cloneable{
     // TODO 01: Implementar clone. El clonado deberá generar un pokemon con nuevos IV.
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
 
         Pokemon clonado = (Pokemon) super.clone();
 

@@ -28,6 +28,7 @@ public class GameApp extends Application {
         jugador.incluirPokemonParaCombatir(5, new Nidoking(45));
         jugador.getPokemonesCapturados().add(new Squirtle(25));
         jugador.getPokemonesCapturados().add(new Charmander(35));
+        // Para que me funcionase el nidoran, le he cambiado el nombre a su png
         launch(args);
     }
 }

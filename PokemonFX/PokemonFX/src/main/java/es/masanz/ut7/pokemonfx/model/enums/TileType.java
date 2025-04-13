@@ -42,6 +42,9 @@ public enum TileType {
     PARED_INFERIOR("/pruebas/pared_inferior.png"),
     PUERTA("/pruebas/puerta.png"),
     PARED_INFERIOR_DERECHA("/pruebas/pared_inferior_derecha.png"),
+    SUELO_MADERA("/pruebas/suelo_madera.png"),
+    ARBOL_PARTE_ABAJO("/pruebas/arbol_parte_abajo.png"),
+    ARBOL_PARTE_ARRIBA("/pruebas/arbol_parte_arriba.png"),
     ESQUINA_DERECHA_INFERIOR("/pruebas/esquina_derecha_inferior.png");
 
     public final Image imagen;

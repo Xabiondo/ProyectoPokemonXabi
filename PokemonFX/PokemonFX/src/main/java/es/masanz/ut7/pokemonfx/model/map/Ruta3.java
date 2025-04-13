@@ -28,8 +28,8 @@ public class Ruta3 extends Mapa {
     protected void cargarMapa() {
 
         int[][] mapaRuta = {
-                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1},
-                {1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 5},
+                {8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8},
+                {7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 5},
                 {0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1},
                 {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4},
@@ -88,6 +88,15 @@ public class Ruta3 extends Mapa {
                         mapData[y][x] = TileType.AGUAGRANDE.ordinal();
                         collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
+                    case 7:
+                        mapData[y][x] = TileType.ARBOL_PARTE_ABAJO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 8:
+                        mapData[y][x] = TileType.ARBOL_PARTE_ARRIBA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+
                     case 13:
                         mapData[y][x] = TileType.AGUA_ROCA_DERECHA.ordinal();
                         collisionMap[y][x] = CollisionType.PARED.ordinal();

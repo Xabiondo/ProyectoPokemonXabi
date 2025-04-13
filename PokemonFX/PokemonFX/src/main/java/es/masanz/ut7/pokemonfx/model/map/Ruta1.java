@@ -1,14 +1,14 @@
 package es.masanz.ut7.pokemonfx.model.map;
 
+import es.masanz.ut7.pokemonfx.model.base.Entrenador;
 import es.masanz.ut7.pokemonfx.model.base.Evento;
 import es.masanz.ut7.pokemonfx.model.base.Mapa;
 import es.masanz.ut7.pokemonfx.model.base.Pokemon;
 import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
 import es.masanz.ut7.pokemonfx.model.event.EventoEjemplo;
-import es.masanz.ut7.pokemonfx.model.pokemons.Bulbasaur;
-import es.masanz.ut7.pokemonfx.model.pokemons.Charmander;
-import es.masanz.ut7.pokemonfx.model.pokemons.Squirtle;
+import es.masanz.ut7.pokemonfx.model.fx.NPC;
+import es.masanz.ut7.pokemonfx.model.pokemons.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +18,9 @@ public class Ruta1 extends Mapa {
     @Override
     protected void cargarPokemonSalvajes(){
         pokemonSalvajes = new ArrayList<>();
-        pokemonSalvajes.add(new Bulbasaur(5));
-        pokemonSalvajes.add(new Squirtle(6));
-        pokemonSalvajes.add(new Charmander(7));
+        pokemonSalvajes.add(new Eevee(5));
+        pokemonSalvajes.add(new Growlithe(6));
+        pokemonSalvajes.add(new Arcanine(7));
     }
 
     @Override
@@ -52,6 +52,14 @@ public class Ruta1 extends Mapa {
         this.eventsMap = new Evento[altura][anchura];
         this.npcs = new ArrayList<>();
 
+
+        Entrenador entrenador = new Entrenador();
+        NPC npc1 = new NPC(1,1,3 , entrenador);
+
+        entrenador.incluirPokemonParaCombatir(1 , new Arcanine(15));
+        npcs.add(npc1);
+
+
         for (int y = 0; y < altura; y++) {
             for (int x = 0; x < anchura; x++) {
                 switch (mapaRuta[y][x]) {
@@ -75,7 +83,7 @@ public class Ruta1 extends Mapa {
                     case 5:
                         mapData[y][x] = TileType.TELEPORT_RED.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();
-                        teleportMap[y][x] = "Ruta 4";
+                        teleportMap[y][x] = "Ruta 2";
                         break;
                     default:
                         mapData[y][x] = TileType.CAMINO_BLANCO.ordinal();

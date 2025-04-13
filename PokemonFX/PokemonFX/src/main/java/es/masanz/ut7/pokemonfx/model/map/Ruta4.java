@@ -173,7 +173,8 @@ public class Ruta4 extends Mapa {
                         break;
                     case 35:
                         mapData[y][x] = TileType.PUERTA.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal(); // Se puede entrar
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        teleportMap[y][x] = "Casa";
                         break;
                     case 36:
                         mapData[y][x] = TileType.PARED_INFERIOR_DERECHA.ordinal();

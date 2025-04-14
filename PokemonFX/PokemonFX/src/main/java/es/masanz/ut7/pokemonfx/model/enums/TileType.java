@@ -45,7 +45,24 @@ public enum TileType {
     SUELO_MADERA("/pruebas/suelo_madera.png"),
     ARBOL_PARTE_ABAJO("/pruebas/arbol_parte_abajo.png"),
     ARBOL_PARTE_ARRIBA("/pruebas/arbol_parte_arriba.png"),
-    ESQUINA_DERECHA_INFERIOR("/pruebas/esquina_derecha_inferior.png");
+    ESQUINA_DERECHA_INFERIOR("/pruebas/esquina_derecha_inferior.png"),
+
+    BASE_CENTRO_DERECHA_ROJO("/pruebas/base_centro_derecha_rojo.png"),
+    BASE_CENTRO_IZQUIERDA_ROJO("/pruebas/base_centro_izquierda_rojo.png"),
+    BASE_DERECHA_ROJO("/pruebas/base_derecha_rojo.png"),
+    BASE_IZQUIERDA_ROJO("/pruebas/base_izquierda_rojo.png"),
+    PARED_CENTRO_DERECHA_ROJO("/pruebas/pared_centro_derecha_rojo.png"),
+    PARED_CENTRO_IZQUIERDA_ROJO("/pruebas/pared_centro_izquierda_rojo.png"),
+    PARED_DERECHA_ROJO("/pruebas/pared_derecha_rojo.png"),
+    PARED_IZQUIERDA_ROJO("/pruebas/pared_izquierda_rojo.png"),
+    PUERTA_DERECHA_ROJO("/pruebas/puerta_derecha_rojo.png"),
+    PUERTA_IZQUIERDA_ROJO("/pruebas/puerta_izquierda_rojo.png"),
+    TEJADO_CENTRO_DERECHA_ROJO("/pruebas/tejado_centro_derecha_rojo.png"),
+    TEJADO_CENTRO_IZQUIERDA_ROJO("/pruebas/tejado_centro_izquierda_rojo.png"),
+    TEJADO_DERECHA_ROJO("/pruebas/tejado_derecha_rojo.png"),
+    TEJADO_IZQUIERDA_ROJO("/pruebas/tejado_izquierda_rojo.png"),
+    VENTANA_DERECHA_ROJO("/pruebas/ventana_derecha_rojo.png"),
+    VENTANA_IZQUIERDA_ROJO("/pruebas/ventana_izquierda_rojo.png");
 
     public final Image imagen;
 

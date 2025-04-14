@@ -40,12 +40,12 @@ public class Ruta1 extends Mapa {
                 {2, 10, 10, 10, 10, 2, 2, 10, 10, 10, 10, 2, 2, 10, 10, 10, 10, 2},
                 {2, 1, 15, 13, 14, 2, 2, 1, 15, 13, 14, 2, 2, 1, 15, 13, 14, 2},
                 {2, 3, 12, 4, 5, 2, 2, 3, 12, 4, 5, 2, 2, 3, 12, 4, 5, 2},
-                {18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18},
+                {18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19},
                 {2, 2, 2, 2, 2, 2, 2, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17}, // Cambiada a césped
                 {2, 2, 2, 2, 2, 2, 2, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16}
         };
-        this.inicioX = 7; // Posición inicial del jugador
-        this.inicioY = 8;
+        this.inicioX = 0; // Posición inicial del jugador
+        this.inicioY = 10;
 
         this.altura = mapaRuta.length;
         this.anchura = mapaRuta[0].length;
@@ -147,8 +147,14 @@ public class Ruta1 extends Mapa {
                         break;
                     case 18:
                         mapData[y][x] = TileType.CAMINO_BLANCO.ordinal();
-                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
                         break;
+                    case 19:
+                        mapData[y][x] = TileType.TELEPORT_RED.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        teleportMap[y][x] = "Ruta 2";
+                        break;
+
 
 
 

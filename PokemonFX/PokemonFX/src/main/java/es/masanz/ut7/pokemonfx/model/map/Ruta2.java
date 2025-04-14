@@ -58,7 +58,7 @@ public class Ruta2 extends Mapa {
         this.eventsMap = new Evento[altura][anchura];
         this.npcs = new ArrayList<>();
 
-        teleportMap[3][9] = "Ruta 1";
+
 
         Entrenador entrenador1 = new Entrenador();
         entrenador1.incluirPokemonParaCombatir(0, new Bulbasaur(50));
@@ -85,7 +85,7 @@ public class Ruta2 extends Mapa {
             for (int x = 0; x < anchura; x++) {
                 switch (mapaRuta[y][x]) {
                     case 1:
-                        mapData[y][x] = TileType.PARED_BLANCA.ordinal();
+                        mapData[y][x] = TileType.CESPED_ARBUSTO.ordinal();
                         collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 2:

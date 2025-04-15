@@ -28,15 +28,15 @@ public class Ruta3_1 extends Mapa {
         int[][] mapaRuta = {
                 {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
                 {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
-                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1 , 1, 8, 8, 8, 8, 8, 8, 8},
-                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7, 7, 7, 7, 7, 7, 7, 7},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 5},
-                {0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 4, 1, 1, 1, 1, 1, 1, 1},
+                {0, 0, 0, 4, 4, 4, 4, 4, 4, 4 ,4 , 8, 8, 8, 8, 8, 8, 8, 8},
+                {0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 7, 7, 7, 7, 7, 7, 7, 7},
+                {4, 4, 0, 0, 4, 4, 4, 4, 4,4 , 4, 4, 4, 4, 4, 4, 4, 4, 4},
+                {4, 4, 0, 0, 4, 4, 4, 4, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4},
                 {4, 4, 0, 0, 4, 4, 4, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4},
-                {4, 4, 4, 0, 0, 0, 0, 0, 4, 4, 4, 0, 0, 4, 4, 4, 4, 4, 4},
-                {4, 4, 4, 4, 0, 0, 0, 4, 4, 4, 4, 4, 0, 0, 0, 4, 4, 4, 4},
-                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 5},
-                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 5},
+                {4, 4, 4, 0, 0, 0, 0, 0, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 5},
+                {4, 4, 4, 4, 0, 0, 0, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 5},
+                {0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3},
+                {0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3},
                 {14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14},
                 {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
                 {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
@@ -44,7 +44,7 @@ public class Ruta3_1 extends Mapa {
         };
 
         this.inicioX = 1; // Columna 1 (segunda columna)
-        this.inicioY = 1; // Fila 1 (segunda fila)
+        this.inicioY = 2; // Fila 1 (segunda fila)
 
         this.altura = mapaRuta.length;
         this.anchura = mapaRuta[0].length;
@@ -55,17 +55,18 @@ public class Ruta3_1 extends Mapa {
         this.teleportMap = new String[altura][anchura];
         this.eventsMap = new Evento[altura][anchura];
         this.npcs = new ArrayList<>();
-        Entrenador entrenador1 = new Entrenador();
+        Entrenador noFunciona = new Entrenador();
         Entrenador entrenador2 = new Entrenador();
 
 
 
-        NPC npc1 = new NPC(3 , 5 , 3 , entrenador1);
-        NPC npc2 = new NPC(10 , 7 , 1 , entrenador2);
-        entrenador1.incluirPokemonParaCombatir(1 , new Mewtwo(12));
-        entrenador1.incluirPokemonParaCombatir(2 , new Nidoran(12));
+
+        noFunciona.incluirPokemonParaCombatir(1 , new Mewtwo(12));
+        noFunciona.incluirPokemonParaCombatir(2 , new Nidorino(22));
         entrenador2.incluirPokemonParaCombatir(1 , new Venusaur(32));
-        entrenador2.incluirPokemonParaCombatir(1 , new Charmeleon(22));
+        entrenador2.incluirPokemonParaCombatir(2 , new Charmeleon(22));
+        NPC npc1 = new NPC(3 , 5 , 4 , noFunciona);
+        NPC npc2 = new NPC(10 , 7 , 1 , entrenador2);
         npcs.add(npc1);
         npcs.add(npc2);
 

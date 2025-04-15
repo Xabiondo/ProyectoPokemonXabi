@@ -17,9 +17,9 @@ public class Ruta3 extends Mapa {
     @Override
     protected void cargarPokemonSalvajes() {
         pokemonSalvajes = new ArrayList<>();
-        pokemonSalvajes.add(new Bulbasaur(5));
-        pokemonSalvajes.add(new Squirtle(6));
-        pokemonSalvajes.add(new Charmander(7));
+        pokemonSalvajes.add(new Ditto(11));
+        pokemonSalvajes.add(new Dugtrio(15));
+        pokemonSalvajes.add(new Dodrio(18));
     }
 
     @Override
@@ -28,13 +28,13 @@ public class Ruta3 extends Mapa {
         int[][] mapaRuta = {
                 {8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8},
                 {7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 5},
-                {0, 0, 1, 1, 0, 0, 1, 1, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1},
+                {4, 4, 4, 4, 4, 4, 4, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8},
+                {4, 4, 4, 4, 4, 4, 1, 1, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7},
                 {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4},
                 {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4},
                 {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4},
-                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5},
+                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5},
                 {14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14},
                 {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
                 {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
@@ -60,12 +60,12 @@ public class Ruta3 extends Mapa {
 
 
 
-        NPC npc1 = new NPC(3 , 5 , 3 , entrenador1);
-        NPC npc2 = new NPC(10 , 7 , 1 , entrenador2);
+        NPC npc1 = new NPC(13 , 4 , 0 , entrenador1);
+        NPC npc2 = new NPC(10 , 8 , 1 , entrenador2);
         entrenador1.incluirPokemonParaCombatir(1 , new Mewtwo(12));
-        entrenador1.incluirPokemonParaCombatir(2 , new Nidoran(12));
+
         entrenador2.incluirPokemonParaCombatir(1 , new Venusaur(32));
-        entrenador2.incluirPokemonParaCombatir(1 , new Charmeleon(22));
+        entrenador2.incluirPokemonParaCombatir(2 , new Charmeleon(22));
         npcs.add(npc1);
         npcs.add(npc2);
 

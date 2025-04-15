@@ -20,13 +20,13 @@ public class GameApp extends Application {
     public static void main(String[] args) {
         // TODO 00: AQUI DEFINIR VUESTRO ENTRENADOR INICIAL
         jugador = new Entrenador();
-        jugador.incluirPokemonParaCombatir(0, new Eevee(5));
-        jugador.incluirPokemonParaCombatir(1, new Eevee(6));
-        jugador.incluirPokemonParaCombatir(2, new Arcanine(7));
-        jugador.incluirPokemonParaCombatir(3, new Nidoran(8));
+        jugador.incluirPokemonParaCombatir(0, new Charmander(59));
+        jugador.incluirPokemonParaCombatir(1, new Cubone(15));
+        jugador.incluirPokemonParaCombatir(2, new Dodrio(22));
+        jugador.incluirPokemonParaCombatir(3, new Diglett(20));
         jugador.incluirPokemonParaCombatir(4, new Gyarados(9));
         jugador.incluirPokemonParaCombatir(5, new Nidoking(45));
-        jugador.getPokemonesCapturados().add(new Squirtle(25));
+        jugador.getPokemonesCapturados().add(new Wartortle(45));
         jugador.getPokemonesCapturados().add(new Charmander(35));
         // Para que me funcionase el nidoran, le he cambiado el nombre a su png
         launch(args);

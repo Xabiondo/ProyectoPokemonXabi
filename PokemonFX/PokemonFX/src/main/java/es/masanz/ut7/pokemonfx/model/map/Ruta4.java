@@ -41,8 +41,8 @@ public class Ruta4 extends Mapa {
 
         };
 
-        this.inicioX = 1; // Columna 1 (segunda columna)
-        this.inicioY = 1; // Fila 1 (segunda fila)
+        this.inicioX = 0; // Columna 1 (segunda columna)
+        this.inicioY = 3; // Fila 1 (segunda fila)
 
         this.altura = mapaRuta.length;
         this.anchura = mapaRuta[0].length;
@@ -54,7 +54,6 @@ public class Ruta4 extends Mapa {
         this.eventsMap = new Evento[altura][anchura];
         this.npcs = new ArrayList<>();
 
-        teleportMap[0][14] = "Ruta 2";
 
         for (int y = 0; y < altura; y++) {
             for (int x = 0; x < anchura; x++) {

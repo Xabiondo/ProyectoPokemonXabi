@@ -2,13 +2,11 @@ package es.masanz.ut7.pokemonfx.model.map;
 
 import es.masanz.ut7.pokemonfx.model.base.Evento;
 import es.masanz.ut7.pokemonfx.model.base.Mapa;
-import es.masanz.ut7.pokemonfx.model.pokemons.Bulbasaur;
+import es.masanz.ut7.pokemonfx.model.pokemons.*;
 import es.masanz.ut7.pokemonfx.model.base.Entrenador;
 import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
-import es.masanz.ut7.pokemonfx.model.pokemons.Charmander;
-import es.masanz.ut7.pokemonfx.model.pokemons.Squirtle;
 
 import java.util.ArrayList;
 
@@ -19,9 +17,9 @@ public class Ruta2 extends Mapa {
     @Override
     protected void cargarPokemonSalvajes(){
         pokemonSalvajes = new ArrayList<>();
-        pokemonSalvajes.add(new Bulbasaur(80));
-        pokemonSalvajes.add(new Squirtle(100));
-        pokemonSalvajes.add(new Charmander(9));
+        pokemonSalvajes.add(new Ditto(10));
+        pokemonSalvajes.add(new Diglett(10));
+        pokemonSalvajes.add(new Gyarados(15));
     }
 
     @Override
@@ -29,15 +27,15 @@ public class Ruta2 extends Mapa {
 
         int[][] mapaRuta = {
                 {1, 1, 1, 1,  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 , 1, 1, 1},
-                {1, 2, 2, 1,  2, 2, 2, 3, 2, 2, 2, 3, 2, 2, 2, 1 , 2, 5, 1},
+                {1, 2, 2, 1,  2, 2, 2, 3, 2, 2, 2, 3, 2, 2, 2, 1 , 2, 2, 1},
                 {1, 2, 2, 2,  2, 2, 2, 3, 2, 2, 2, 3, 2, 2, 2, 2 , 2, 2, 1},
-                {1, 2, 2, 11, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 12, 2, 2, 1},
+                {1, 5, 2, 11, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 12, 2, 2, 1},
                 {1, 2, 2, 9,  6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 10, 2, 2, 1},
                 {1, 2, 2, 9,  6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 10, 2, 2, 1},
                 {1, 2, 2, 9,  6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 10, 2, 2, 1},
                 {1, 2, 2, 9,  6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 10, 2, 2, 1},
                 {1, 2, 2, 9,  6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 10, 2, 2, 1},
-                {1, 2, 2, 9,  6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 10, 2, 2, 1},
+                {1, 2, 2, 9,  6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 10, 1, 1, 1},
                 {1, 2, 2, 9,  6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 10, 2, 2, 1},
                 {1, 2, 2, 13, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 14, 2, 2, 1},
                 {1, 2, 2, 2,  2, 2, 2, 3, 2, 2, 2, 3, 2, 2, 2, 2 , 2, 2, 1},
@@ -61,25 +59,23 @@ public class Ruta2 extends Mapa {
 
 
         Entrenador entrenador1 = new Entrenador();
-        entrenador1.incluirPokemonParaCombatir(0, new Bulbasaur(50));
-        entrenador1.incluirPokemonParaCombatir(1, new Bulbasaur(40));
-        entrenador1.incluirPokemonParaCombatir(2, new Bulbasaur(30));
-        entrenador1.incluirPokemonParaCombatir(3, new Bulbasaur(20));
-        entrenador1.incluirPokemonParaCombatir(4, new Bulbasaur(10));
-        entrenador1.incluirPokemonParaCombatir(5, new Bulbasaur(5));
+
+        entrenador1.incluirPokemonParaCombatir(1, new Gyarados(30));
+        entrenador1.incluirPokemonParaCombatir(2, new Dewgong(20));
+        entrenador1.incluirPokemonParaCombatir(3, new Bulbasaur(10));
+        entrenador1.incluirPokemonParaCombatir(4, new Charmander(5));
 
         Entrenador entrenador2 = new Entrenador();
-        entrenador2.incluirPokemonParaCombatir(0, new Charmander(50));
-        entrenador2.incluirPokemonParaCombatir(1, new Charmander(40));
-        entrenador2.incluirPokemonParaCombatir(2, new Charmander(30));
-        entrenador2.incluirPokemonParaCombatir(3, new Charmander(20));
-        entrenador2.incluirPokemonParaCombatir(4, new Charmander(10));
-        entrenador2.incluirPokemonParaCombatir(5, new Charmander(5));
+
+        entrenador2.incluirPokemonParaCombatir(1, new Marowak(30));
+        entrenador2.incluirPokemonParaCombatir(2, new Mewtwo(20));
+        entrenador2.incluirPokemonParaCombatir(3, new Cubone(10));
+
 
         // ENTRENADOR CON APARIENCIA RANDOM
         npcs.add(new NPC(2, 1, ABAJO, entrenador1));
         // ENTRENADOR CON APARIENCIA QUE YO INDICO
-        npcs.add(new NPC(2, 3, ARRIBA, 0, entrenador2));
+        npcs.add(new NPC(2, 3, ARRIBA, 3, entrenador2));
 
         for (int y = 0; y < altura; y++) {
             for (int x = 0; x < anchura; x++) {

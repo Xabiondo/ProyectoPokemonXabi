@@ -6,9 +6,7 @@ import es.masanz.ut7.pokemonfx.model.base.Mapa;
 import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
-import es.masanz.ut7.pokemonfx.model.pokemons.Arcanine;
-import es.masanz.ut7.pokemonfx.model.pokemons.Eevee;
-import es.masanz.ut7.pokemonfx.model.pokemons.Growlithe;
+import es.masanz.ut7.pokemonfx.model.pokemons.*;
 
 import java.util.ArrayList;
 
@@ -16,11 +14,9 @@ public class Ruta5 extends Mapa {
 
     @Override
     protected void cargarPokemonSalvajes() {
-        pokemonSalvajes = new ArrayList<>();
-        pokemonSalvajes.add(new Eevee(5));
-        pokemonSalvajes.add(new Growlithe(6));
-        pokemonSalvajes.add(new Arcanine(7));
+
     }
+    //Enn este mapa no hay evidentemente
 
     @Override
     protected void cargarMapa() {
@@ -52,8 +48,13 @@ public class Ruta5 extends Mapa {
         this.npcs = new ArrayList<>();
 
         Entrenador entrenador = new Entrenador();
-        NPC npc1 = new NPC(1, 1, 3, entrenador);
-        entrenador.incluirPokemonParaCombatir(1, new Arcanine(15));
+        NPC npc1 = new NPC(5, 0, 0, entrenador);
+        entrenador.incluirPokemonParaCombatir(0, new Arcanine(15));
+        entrenador.incluirPokemonParaCombatir(1 , new Gyarados(36));
+        entrenador.incluirPokemonParaCombatir(2 , new Dewgong(33));
+        entrenador.incluirPokemonParaCombatir(3 , new Mewtwo(40));
+        entrenador.incluirPokemonParaCombatir(4 , new Wartortle(36));
+        entrenador.incluirPokemonParaCombatir(5 , new Venusaur(36));
         npcs.add(npc1);
 
         for (int y = 0; y < altura; y++) {

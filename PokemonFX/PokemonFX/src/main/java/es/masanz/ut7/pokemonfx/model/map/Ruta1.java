@@ -18,7 +18,7 @@ public class Ruta1 extends Mapa {
     @Override
     protected void cargarPokemonSalvajes() {
         pokemonSalvajes = new ArrayList<>();
-        pokemonSalvajes.add(new Eevee(5));
+        pokemonSalvajes.add(new Mewtwo(5));
         pokemonSalvajes.add(new Growlithe(6));
         pokemonSalvajes.add(new Arcanine(7));
     }
@@ -41,7 +41,7 @@ public class Ruta1 extends Mapa {
                 {2, 1, 15, 13, 14, 2, 2, 1, 15, 13, 14, 2, 2, 1, 15, 13, 14, 2},
                 {2, 3, 12, 4, 5, 2, 2, 3, 12, 4, 5, 2, 2, 3, 12, 4, 5, 2},
                 {18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19},
-                {2, 2, 2, 2, 2, 2, 2, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17}, // Cambiada a césped
+                {2, 2, 2, 2, 2, 2, 2, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17},
                 {2, 2, 2, 2, 2, 2, 2, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16}
         };
         this.inicioX = 0; // Posición inicial del jugador

@@ -30,7 +30,7 @@ public class Charizard extends Pokemon implements Fuego, Volador {
         Ataque vuelo = new Ataque("vuelo", 90, 95, Tipo.VOLADOR, false, 15);
         asignarAtaque(vuelo.getNombre(), vuelo);
 
-        Ataque sofoco = new Ataque("sofoco", 150, 90, Tipo.FUEGO, true, 5);
+        Ataque sofoco = new Ataque("incendioLegendario", 150, 90, Tipo.FUEGO, true, 15);
         asignarAtaque(sofoco.getNombre(), sofoco);
     }
 }
